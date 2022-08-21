@@ -1,0 +1,103 @@
+.select-cascader-box{
+    .at-tabs__header {
+        background-color: #FAFAFA;
+    }
+
+    .at-tabs__body {
+        height: calc( 100% - 86px);
+    }
+
+    .at-tabs-pane--active{
+        height: 100%;
+    }
+
+    .specialty-box {
+        display: flex;
+        justify-content: left;
+        height: 100%;
+        width: 100%;
+    //    background-color: #FAFAFA;
+        .study-type-box {
+            background-color: $white;
+            width: 200px;
+            height: 100%;
+        //    overflow: auto;
+            flex: auto;
+            justify-content: left;
+            .study-type-list {
+                .list-item-ico {
+                    width: 30px;
+                    line-height: 80px;
+                    visibility: hidden;
+                }
+                
+                &.actived{
+                    background: none;
+                    color: $black;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .study-type-box:nth-child(1) {
+            .study-type-list{
+                position: relative;
+                z-index: 2;
+                &.actived{
+                    &::after{
+                        content: '';
+                        right:-22px;
+                        top:30px;
+                        position: absolute;
+                        width: 16px;
+                        height: 16px;
+                        border-radius: 50%;
+                        background-color: $primary;
+                    }
+                }
+            }
+            
+        }
+
+        .study-type-box:nth-child(n+2) {
+            border-left: 1px solid #E3E3E3;
+            .study-type-list{
+                &.actived {
+                    color:$primary;
+                }
+                
+            }
+        }
+
+        .study-type-box:first-child {
+            width: auto !important;
+            padding-right: 12px;
+            flex: initial;
+        }
+
+        .study-type-box:last-child {
+            flex: auto !important;
+
+            .study-type-list {
+                box-sizing: border-box;
+                padding: 0 30px;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                .list-item-ico {
+                    visibility: hidden;
+                }
+
+                &.actived {
+                    .list-item-ico {
+
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+    
+    }
+}
+

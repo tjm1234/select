@@ -1,0 +1,329 @@
+View,Text{
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-size: 28px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+    width: 0 !important;
+    height: 0 !important;
+    -webkit-appearance: none;
+    background: transparent;
+}
+
+.ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.clamp1{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.clamp2{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.multi-ellipsis--l2 {
+    -webkit-line-clamp: 2;
+}
+
+.multi-ellipsis--l2,
+.multi-ellipsis--l3 {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+}
+
+.multi-ellipsis--l3 {
+    -webkit-line-clamp: 3;
+}
+
+.clearfix:after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+.hairline,
+.hairline--bottom,
+.hairline--left,
+.hairline--right,
+.hairline--surround,
+.hairline--top,
+.hairline--top-bottom {
+    position: relative;
+}
+
+.hairline--bottom:after,
+.hairline--left:after,
+.hairline--right:after,
+.hairline--surround:after,
+.hairline--top-bottom:after,
+.hairline--top:after,
+.hairline:after {
+    position: absolute;
+    box-sizing: border-box;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    content: " ";
+    pointer-events: none;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    border: 0 solid #ebedf0;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+}
+
+.hairline--top:after {
+    border-top-width: 1PX;
+}
+
+.hairline--left:after {
+    border-left-width: 1PX;
+}
+
+.hairline--right:after {
+    border-right-width: 1PX;
+}
+
+.hairline--bottom:after {
+    border-bottom-width: 1PX;
+}
+
+.hairline--top-bottom:after {
+    border-width: 1PX 0;
+}
+
+.hairline--surround:after {
+    border-width: 1PX;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clearfix {
+    overflow: auto;
+    zoom: 1;
+}
+
+.text-l {
+    text-align: left;
+}
+
+.text-r {
+    text-align: right;
+}
+
+.full-btn {
+    padding-bottom: 68px;
+}
+
+.full-page {
+    padding-bottom: 68px;
+}
+
+.empty-box {
+    height: 868px;
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 0 32px;
+
+}
+
+.flex {
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.flex.flex-column {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+.flex-1 {
+    width: 100%;
+    -webkit-box-flex: 1;
+    flex: 1;
+}
+
+.flex-2 {
+    -webkit-box-flex: 2;
+    flex: 2;
+}
+
+.fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+
+
+/*匹配助教  公共样式*/
+.teacher-add-page{
+    background:#ED6C15 url('https://simg01.gaodunwangxiao.com/uploadfiles/tmp/upload/202111/10/7cf40_20211110114132.png') center center no-repeat;
+    background-size: cover;
+    width:100%;
+    height:100%;
+    padding:3vh 5vw;
+    box-sizing: border-box;
+    flex: 1;
+
+    .teacher-add {
+        text-align: center;
+        position: relative;
+    }
+    .teacher-add-avatar {
+        display: inline-block;
+        width: 128px;
+        height: 128px;
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.08);
+        border-radius: 50%;
+        border: 4px solid #FFFFFF;
+        position: absolute;
+        left: 50%;
+        margin-left: -68px;
+        margin-top: -68px;
+        z-index: 9;
+    
+        .teacher-add-avatar-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50%;
+        }
+    
+       
+    }
+    .teacher-add-bd {
+        background: #fff;
+        border-radius: 8px;
+        margin-top: 66px;
+        padding-top: 66px;
+        overflow: hidden;
+    }
+    .teacher-add-tt {
+        padding-top: 16px;
+        font-size: 32px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.85);
+        line-height: 48px;
+        .teacher-add-avatar-img {
+            width: 64px;
+            height: 64px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50%;
+            margin-right: 24px;
+            vertical-align: middle;
+        }
+    }
+    .teacher-add-tips {
+        margin-top: 32px;
+        font-size: 36px;
+        font-family: PingFangSC-Medium, PingFang SC;
+        font-weight: 700;
+        color: #FF6E00;
+        line-height: 56px;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+    }
+    
+    .teacher-add-product{
+        
+        height: 48px;
+        background: #FFFFFF;
+        border-radius: 8px;
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        display: inline-block;
+        line-height: 48px;
+        padding:0 16px;
+        font-size: 28px;
+        color: #666;
+        margin-top: 16px;
+        min-width: 128px;
+    }
+    
+    .teacher-add-wx {
+        width: 456px;
+        height: 456px;
+        object-fit: cover;
+        object-position: center;
+        margin-top: 30px;
+    }
+    
+    .teacher-add-ft{
+        display: flex;
+        line-height: 88px;
+        margin-top: 32px;
+        text-align: center;
+        .ft-item{
+            height: 64px;
+            border-radius: 32px;
+            line-height: 64px;
+            font-size: 28px;
+            margin-bottom: 20px;
+            padding: 0 40px;
+            color: rgba(0, 0, 0, 0.45);
+            background: #fff;
+            border:1px solid #ccc;
+        }
+    }
+    .teacher-add-hint {
+        text-align: left;
+        margin-left: 12%;
+        font-size: 24px;
+        height: 34px;
+        line-height: 34px;
+        margin-top: 16px;
+        color: rgba(0, 0, 0, 0.45);
+        .teacher-add-hint-sp{
+            width: 30px;
+            height: 30px;
+            margin-right: 16px;
+            font-size: 24px;
+            font-family: PingFangSC-Medium, PingFang SC;
+            display: inline-block;
+            vertical-align: middle;
+            background: #8e8c8f;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            color: #fff;
+    
+        }
+    }
+}
+
+
+

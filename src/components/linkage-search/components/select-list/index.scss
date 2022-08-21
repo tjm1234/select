@@ -1,0 +1,24 @@
+.list-item-box {
+
+    .list-item {
+        display: flex;
+        justify-content: space-between;
+        color: $font-common;
+        height: 88px;
+        line-height: 88px;
+        font-size: 24px;
+
+        .list-item-ico {
+            display: none;
+        }
+    }
+
+    .actived {
+        // background-color: rgba(0, 0, 0, 0.02);
+        color: $primary;
+        .list-item-ico {
+            display: block;
+            line-height: 88px;
+        }
+    }
+}

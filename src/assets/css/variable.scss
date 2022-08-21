@@ -1,0 +1,18 @@
+$primary-color: #003484;
+$font-regular: #999999;
+$font-secondary: #333333;
+$font-common: rgba(0, 0, 0, 0.65);
+$white: #ffffff;
+$black: #000000;
+$danger: #EE4D2A;
+$btn: #1890FF;
+$border: #E5E5E5;
+$over:#EE4D2A;
+$graybg: #f6f7f8;
+
+@mixin text-overflow ($line-num) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line-num;
+  overflow: hidden;
+}

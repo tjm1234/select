@@ -1,0 +1,136 @@
+{
+  "extends": [
+    "taro/react"
+  ],
+  "rules": {
+    "no-var": 2, //对var警告
+    "semi": 2, //强制使用分号
+    // "indent": [
+    // 	"error",
+    // 	"tab",
+    // 	{
+    // 		"VariableDeclarator": 2,
+    // 		"SwitchCase": 1
+    // 	}
+    // ],
+    "indent": [
+      "off",
+      2
+    ],
+    "react/jsx-indent": [
+      2,
+      "tab",
+      {
+        "checkAttributes": true
+      }
+    ],
+    "react/jsx-indent-props": [
+      2,
+      "tab"
+    ], //验证JSX中的props缩进
+    "jsx-quotes": [
+      2,
+      "prefer-double"
+    ],
+    "react/jsx-key": 2, //在数组或迭代器中验证JSX具有key属性
+    "react/jsx-no-bind": 0, //JSX中不允许使用箭头函数和bind
+    "react/jsx-no-duplicate-props": 2, //防止在JSX中重复的props
+    "react/jsx-no-literals": 0, //防止使用未包装的JSX字符串
+    "react/jsx-no-undef": 2, //在JSX中禁止未声明的变量
+    "react/jsx-pascal-case": 0, //为用户定义的JSX组件强制使用PascalCase
+    "react/jsx-sort-props": [
+      "error",
+      {
+        "callbacksLast": true,
+        "shorthandFirst": true,
+        "shorthandLast": true,
+        "ignoreCase": true,
+        "noSortAlphabetically": true,
+        "reservedFirst": true
+      }
+    ], //强化props按字母排序
+    "react/jsx-uses-react": 2, //防止反应被错误地标记为未使用
+    "react/jsx-uses-vars": 2, //防止在JSX中使用的变量被错误地标记为未使用
+    "react/no-danger": 0, //防止使用危险的JSX属性
+    "react/no-did-mount-set-state": 2, //防止在componentDidMount中使用setState
+    "react/no-did-update-set-state": 2, //防止在componentDidUpdate中使用setState
+    "react/no-direct-mutation-state": 2, //防止this.state的直接变异
+    "react/no-multi-comp": 0, //防止每个文件有多个组件定义
+    "react/no-set-state": 0, //防止使用setState
+    "react/prefer-es6-class": 2, //为React组件强制执行ES5或ES6类
+    "react/prop-types": 0, //防止在React组件定义中丢失props验证
+    "react/react-in-jsx-scope": 2, //使用JSX时防止丢失React
+    "react/self-closing-comp": 2, //防止没有children的组件的额外结束标签
+    "react/sort-comp": 2, //强制组件方法顺序
+    "no-extra-boolean-cast": 0, //禁止不必要的bool转换
+    "react/no-array-index-key": 2, //防止在数组中遍历中使用数组key做索引
+    "react/no-deprecated": 2, //不使用弃用的方法
+    "react/jsx-equals-spacing": 2, //在JSX属性中强制或禁止等号周围的空格
+    "react/no-this-in-sfc": 2,
+    "react/no-unsafe": 2,
+    "react/no-unused-state": 2, //防止未使用状态属性的定义
+    "react/no-will-update-set-state": 2, //阻止使用setStateincomponentWillUpdate
+    "react/prefer-stateless-function": 2,
+    "react/void-dom-elements-no-children": 2,
+    "react/jsx-first-prop-new-line": [
+      2,
+      "multiline-multiprop"
+    ],
+    "react/jsx-wrap-multilines": [
+      2,
+      {
+        "declaration": "parens-new-line",
+        "assignment": "parens-new-line",
+        "return": "parens-new-line",
+        "arrow": "parens-new-line",
+        "condition": "parens-new-line",
+        "logical": "parens-new-line",
+        "prop": "parens-new-line"
+      }
+    ],
+    "react/jsx-tag-spacing": [
+      2,
+      {
+        "beforeSelfClosing": "always"
+      }
+    ],
+    "react/jsx-props-no-multi-spaces": 2,
+    "no-unreachable": 2, //不能有无法执行的代码
+    "comma-dangle": 0, //对象字面量项尾不能有逗号
+    "no-mixed-spaces-and-tabs": 0, //禁止混用tab和空格
+    "arrow-parens": 0, //箭头函数用小括号括起来
+    "arrow-spacing": 2, //=>的前/后括号
+    "react-hooks/rules-of-hooks": "error",
+    "eqeqeq": "error", // 必须全等
+    "no-else-return": "error",
+    // 强制使用模板字符串
+    "prefer-template": "error",
+    // -- end --
+    "no-unused-vars": [
+      "error",
+      {
+        "varsIgnorePattern": "Taro"
+      }
+    ],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".tsx"
+        ]
+      }
+    ]
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "useJSXTextNode": true,
+    "project": "./tsconfig.json"
+  }
+}

@@ -1,0 +1,34 @@
+.select-panel-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 16px;
+
+   
+
+    .select-panel-item {
+        width: 31.8%;
+        height: 80px;
+        font-size: 22px;
+        color: $font-common;
+        line-height: 38px;
+        background-color: rgba(0, 0, 0, 0.02);
+        border: 2px solid rgba(0, 0, 0, 0.02);
+        border-radius: 16px;
+        text-align: center;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding:0 32px;
+        box-sizing: border-box;
+    }
+
+    .actived {
+        background: rgba(255, 111, 4, 0.03);
+        border: 2px solid $primary;
+        color: $primary;
+    }
+
+
+}
